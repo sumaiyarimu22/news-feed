@@ -1,5 +1,5 @@
-function formatDate(isoDate) {
-  const date = new Date(isoDate);
+function formatDate(dateTime) {
+  const date = new Date(dateTime);
   const now = new Date();
   const diffMilliseconds = now - date;
   const diffSeconds = Math.floor(diffMilliseconds / 1000);
@@ -23,4 +23,14 @@ function formatDate(isoDate) {
     return date.toLocaleDateString("en-US", options);
   }
 }
-export default formatDate;
+
+const getCurrentDate = () => {
+  return new Date().toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    weekday: "long",
+  });
+};
+
+export { formatDate, getCurrentDate };

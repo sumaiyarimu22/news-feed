@@ -1,11 +1,13 @@
 import MainPage from "./page/MainPage";
-import { NewsDataProvider } from "./provider";
+import { CategoryProvider, NewsDataProvider } from "./provider";
 
 const App = () => {
   return (
-    <NewsDataProvider>
-      <MainPage />
-    </NewsDataProvider>
+    <CategoryProvider>
+      <NewsDataProvider>
+        <MainPage />
+      </NewsDataProvider>{" "}
+    </CategoryProvider>
   );
 };
 

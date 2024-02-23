@@ -1,5 +1,5 @@
-import { useNewsQuery } from "../components/hooks/useNewsQuery";
 import { NewsContext } from "../context";
+import { useNewsQuery } from "../hooks";
 
 const NewsDataProvider = ({ children }) => {
   const { newsData, error, loading } = useNewsQuery();

@@ -1,3 +1,4 @@
+import { getCurrentDate } from "../../utils/dateFormat";
 import Categories from "./Categories";
 import Logo from "./Logo";
 import Search from "./Search";
@@ -58,7 +59,7 @@ const Header = () => {
               strokeLinejoin='round'
             />
           </svg>
-          <span>Thursday, February 25, 2021</span>
+          <span>{getCurrentDate()}</span>
         </div>
         {/* <!-- Logo --> */}
         <Logo />
