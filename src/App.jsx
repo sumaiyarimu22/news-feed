@@ -1,13 +1,15 @@
 import MainPage from "./page/MainPage";
-import { CategoryProvider, NewsDataProvider } from "./provider";
+import { CategoryProvider, NewsDataProvider, SearchProvider } from "./provider";
 
 const App = () => {
   return (
-    <CategoryProvider>
-      <NewsDataProvider>
-        <MainPage />
-      </NewsDataProvider>{" "}
-    </CategoryProvider>
+    <SearchProvider>
+      <CategoryProvider>
+        <NewsDataProvider>
+          <MainPage />
+        </NewsDataProvider>{" "}
+      </CategoryProvider>
+    </SearchProvider>
   );
 };
 
